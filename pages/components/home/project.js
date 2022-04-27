@@ -3,12 +3,11 @@ import styled from "styled-components";
 
 const Item = styled.li`
   width: 100%;
-  height: 70px;
+  padding: 0.5em 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   &:hover {
-    /* transform: translateX(-100px); */
-    transform: scale(1.1);
+    transform: translateX(-50px);
   }
 `;
 
@@ -17,18 +16,20 @@ const Content = styled.a`
   height: 100%;
   display: flex;
   align-items: center;
+  font-size: 1.1rem;
 `;
 
 const TagWrapper = styled.div`
+  flex-direction: column;
   display: flex;
-  width: 5%;
+  width: 20px;
 `;
 const Tag = styled.div`
   display: block;
-  width: 6px;
-  height: 30px;
-  margin: 2px;
-  border-radius: 30px;
+  width: 12px;
+  height: 12px;
+  margin: 5px 0;
+  border-radius: 50%;
 
   &.nft {
     background: #48f1ab;
@@ -37,13 +38,13 @@ const Tag = styled.div`
     background: #f7a1d7;
   }
   &.design {
-    background: #c0e5ff;
+    background: #af7dff;
   }
   &.styled {
-    background: #e6ff81;
+    background: #ffda60;
   }
   &.ethereum {
-    background: #c195f5;
+    background: #75acfa;
   }
   &.web3 {
     background: #fdbebe;
@@ -57,16 +58,30 @@ const TextWrapper = styled.div`
   padding: 0 1em;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  @media (min-width: 40rem) {
+    width: 85%;
+  }
 `;
 const Title = styled.div`
   font-weight: 500;
-  padding-bottom: 3px;
 `;
 
 const Description = styled.div`
-  color: #00000096;
+  color: rgba(0, 0, 0, 0.5);
 `;
-const Project = ({ title, description, link, tags }) => {
+
+const Date = styled.div`
+  display: none;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: 40rem) {
+    display: block;
+  }
+`;
+
+const Project = ({ title, description, link, tags, date }) => {
   return (
     <Item>
       <Link href={link}>
@@ -81,6 +96,7 @@ const Project = ({ title, description, link, tags }) => {
             <Title>{title}</Title>
             <Description>{description}</Description>
           </TextWrapper>
+          <Date>{date}</Date>
         </Content>
       </Link>
     </Item>

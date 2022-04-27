@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Navbar>
         <Link href="/">
-          <Logo>Purple</Logo>
+          <Logo>DFHTDI</Logo>
         </Link>
       </Navbar>
       <Container fullwidth>

@@ -18,10 +18,10 @@ export const Navbar = styled.div`
 `;
 
 export const Logo = styled.div`
- font-family: "Saira Extra Condensed", sans-serif;
- padding: 0.5rem 1rem;
-  font-size: 2rem;
+  font-family: "Saira Extra Condensed", sans-serif;
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
-  cursor pointer;
+  cursor: pointer;
 `;

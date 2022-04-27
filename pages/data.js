@@ -173,7 +173,7 @@ export const project = [
     tag: ["design", "styled comp"],
     description: "A post list based on css grid",
     link: "./postlist",
-    year: "2022",
+    date: "2022-04-25",
     picture: "https://picsum.photos/330/200",
   },
   {
@@ -183,7 +183,7 @@ export const project = [
     description: "An example of minimal but efficient use of space",
     link: "./tablelist",
     location: "Italy",
-    year: "2022",
+    date: "2022-04-26",
     picture: "https://picsum.photos/320/200",
   },
   {
@@ -194,7 +194,7 @@ export const project = [
       "Filasd euismod est non lorem scelerisque consequat. Mauris aliquet nibh non iaculis.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2022-04-27",
     picture: "https://picsum.photos/321/200",
   },
   {
@@ -205,7 +205,7 @@ export const project = [
       "Maecenas est ligula, vestibulum eu risus at, dapibus ornare nulla. Nulla imperdiet.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2022-04-29",
     picture: "https://picsum.photos/322/200",
   },
   {
@@ -216,7 +216,7 @@ export const project = [
       "Ut sit amet commodo risus, fikala sit amet molestie erat. Nulla eros elit.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2022-04-30",
     picture: "https://picsum.photos/323/200",
   },
   {
@@ -227,7 +227,7 @@ export const project = [
       "Phasellus sagittis odio id eleifend vestibulum. Vivamus vulputate sapien in.",
     link: "http://google.com",
     location: "Italy",
-    year: "2022",
+    date: "2022-05-01",
     picture: "https://picsum.photos/330/200",
   },
   {
@@ -238,7 +238,7 @@ export const project = [
       "Mauris ultrices arcu a orci gravida maximus. Aliquam a dapibus.",
     link: "http://google.com",
     location: "Italy",
-    year: "2022",
+    date: "2022",
     picture: "https://picsum.photos/320/200",
   },
   {
@@ -249,7 +249,7 @@ export const project = [
       "Sed fermentum velit urna, vitae aliquam risus fringilla nec. Quisque consectetur dolor.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2021",
     picture: "https://picsum.photos/321/200",
   },
   {
@@ -260,7 +260,7 @@ export const project = [
       "Donec sed porttitor libero. Quisque vehicula maximus sollicitudin. In hac habitasse platea.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2021",
     picture: "https://picsum.photos/322/200",
   },
   {
@@ -271,7 +271,7 @@ export const project = [
       "Curabitur rhoncus in turpis semper porttitor. Nam viverra eleifend metus eleifend luctus. corbet flow",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2021",
     picture: "https://picsum.photos/323/200",
   },
   {
@@ -282,7 +282,7 @@ export const project = [
       "Pellentesque ipsum leo, interdum sed dolor a, laoreet tempor augue. Aliquam erat palette.",
     link: "http://google.com",
     location: "Italy",
-    year: "2022",
+    date: "2022",
     picture: "https://picsum.photos/330/200",
   },
   {
@@ -293,7 +293,7 @@ export const project = [
       "Integer auctor consectetur molestie. Suspendisse tristique erat vitae condimentum luctus. Praesent aliquet.",
     link: "http://google.com",
     location: "Italy",
-    year: "2022",
+    date: "2022",
     picture: "https://picsum.photos/320/200",
   },
   {
@@ -304,7 +304,7 @@ export const project = [
       "Cras nunc purus, rhoncus commodo ipsum at, euismod aliquam 444,4 risus. Fusce tincidunt.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2021",
     picture: "https://picsum.photos/321/200",
   },
   {
@@ -315,7 +315,7 @@ export const project = [
       "Suspendisse eleifend volutpat blandit. In velit tellus, tempor non metus sit amet.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2021",
     picture: "https://picsum.photos/322/200",
   },
   {
@@ -326,7 +326,7 @@ export const project = [
       "Nullam volutpat mollis accumsan. Ut dolor ante, auctor ac felis vel, pellentesque.",
     link: "http://google.com",
     location: "Italy",
-    year: "2021",
+    date: "2021",
     picture: "https://picsum.photos/323/200",
   },
 ];
