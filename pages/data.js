@@ -187,22 +187,21 @@ export const project = [
     picture: "https://picsum.photos/320/200",
   },
   {
-    title: "Expandable Table",
+    title: "Accordion",
     text: "Phanter",
     tag: ["design", "styled comp"],
     description:
-      "Filasd euismod est non lorem scelerisque consequat. Mauris aliquet nibh non iaculis.",
-    link: "http://google.com",
+      "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.",
+    link: "./accordion",
     location: "Italy",
-    date: "2022-04-27",
+    date: "2022-04-28",
     picture: "https://picsum.photos/321/200",
   },
   {
-    title: "004",
+    title: "Proxyus",
     text: "Spider",
     tag: ["mint", "ethereum"],
-    description:
-      "Maecenas est ligula, vestibulum eu risus at, dapibus ornare nulla. Nulla imperdiet.",
+    description: "An example of accoridon using useRef hooks",
     link: "http://google.com",
     location: "Italy",
     date: "2022-04-29",
