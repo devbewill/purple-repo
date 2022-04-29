@@ -25,8 +25,8 @@ export default function Home() {
               return (
                 <Post
                   key={key}
-                  title={post.title}
                   text={post.text}
+                  description={post.description}
                   picture={post.picture}
                 ></Post>
               );

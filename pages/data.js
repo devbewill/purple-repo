@@ -191,7 +191,7 @@ export const project = [
     text: "Phanter",
     tag: ["design", "styled comp"],
     description:
-      "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.",
+      "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium, Tenetur ullam rerum.",
     link: "./accordion",
     location: "Italy",
     date: "2022-04-28",
@@ -208,7 +208,7 @@ export const project = [
     picture: "https://picsum.photos/322/200",
   },
   {
-    title: "005",
+    title: "Velluz",
     text: "Jaguar",
     tag: ["web3", "mint"],
     description:
@@ -219,7 +219,7 @@ export const project = [
     picture: "https://picsum.photos/323/200",
   },
   {
-    title: "006",
+    title: "Brolex",
     text: "Mogul",
     tag: ["design"],
     description:
@@ -230,7 +230,7 @@ export const project = [
     picture: "https://picsum.photos/330/200",
   },
   {
-    title: "007",
+    title: "Bonder",
     text: "Flokis",
     tag: ["nft", "mint"],
     description:
@@ -241,7 +241,7 @@ export const project = [
     picture: "https://picsum.photos/320/200",
   },
   {
-    title: "008",
+    title: "Fetish",
     text: "Bad tre",
     tag: ["web3"],
     description:
@@ -252,7 +252,7 @@ export const project = [
     picture: "https://picsum.photos/321/200",
   },
   {
-    title: "009",
+    title: "Natzukao",
     text: "Vlogz",
     tag: ["polygon", "ethereum"],
     description:
@@ -263,7 +263,7 @@ export const project = [
     picture: "https://picsum.photos/322/200",
   },
   {
-    title: "010",
+    title: "Coliseum",
     text: "Derty",
     tag: ["ethereum", "mint"],
     description:
@@ -274,7 +274,7 @@ export const project = [
     picture: "https://picsum.photos/323/200",
   },
   {
-    title: "011",
+    title: "Blocker",
     text: "Crolander",
     tag: ["mint", "styled comp"],
     description:
@@ -285,7 +285,7 @@ export const project = [
     picture: "https://picsum.photos/330/200",
   },
   {
-    title: "012",
+    title: "Spotter",
     text: "Velluto",
     tag: ["styled comp", "design"],
     description:
@@ -296,7 +296,7 @@ export const project = [
     picture: "https://picsum.photos/320/200",
   },
   {
-    title: "013",
+    title: "Anversa",
     text: "Sdengz",
     tag: ["polygon", "nft"],
     description:
@@ -307,7 +307,7 @@ export const project = [
     picture: "https://picsum.photos/321/200",
   },
   {
-    title: "014",
+    title: "Milano",
     text: "Natzukao",
     tag: ["web3", "design"],
     description:
@@ -318,7 +318,7 @@ export const project = [
     picture: "https://picsum.photos/322/200",
   },
   {
-    title: "015",
+    title: "Selenium",
     text: "Ladybug",
     tag: ["ethereum", "mint"],
     description:

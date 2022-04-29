@@ -11,6 +11,7 @@ const S_imgWrapper = styled.div`
   height: 16.5rem;
   border-radius: 0.375rem;
   box-shadow: 0 7px 18px #dbdbdb;
+  margin-bottom: 1em;
 `;
 
 const S_img = styled.img`
@@ -24,21 +25,27 @@ const S_img = styled.img`
 `;
 
 const S_postTitle = styled.h3`
+  text-transform: uppercase;
+  font-size: 1.5rem;
   color: #333;
+  font-weight: 800;
 `;
 
 const S_postText = styled.p`
-  color: #666;
+  margin: 0.5em 0;
+  color: rgb(0 0 0 / 70%);
+  font-size: 1.4rem;
+  font-family: "Lora";
 `;
 
-const Post = ({ picture, title, text }) => {
+const Post = ({ picture, text, description }) => {
   return (
     <S_post>
       <S_imgWrapper>
-        <S_img src={picture} alt={title} />
+        <S_img src={picture} alt={text} />
       </S_imgWrapper>
-      <S_postTitle>{title}</S_postTitle>
-      <S_postText>{text}</S_postText>
+      <S_postTitle>{text}</S_postTitle>
+      <S_postText>{description}</S_postText>
     </S_post>
   );
 };

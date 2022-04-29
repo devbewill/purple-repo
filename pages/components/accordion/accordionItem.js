@@ -29,17 +29,20 @@ const AccordionItem = ({ prj, active, onToggle }) => {
 };
 
 const Opener = styled.button`
+  font-family: "Poppins";
+  text-transform: uppercase;
   text-align: left;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: 0;
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
-  padding: 2em;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  border: 1px solid #222;
-  background: #fff;
+  background: #fcd927;
+  margin-top: 5px;
+  padding: 1.5rem;
 `;
 
 const ContentWrapper = styled.div`
@@ -49,7 +52,9 @@ const ContentWrapper = styled.div`
 `;
 
 const Description = styled.div`
-  padding: 1em;
+  background: rgb(251 216 38 / 20%);
+  font-size: 1.5rem;
+  padding: 1.5em;
 `;
 
 export default AccordionItem;

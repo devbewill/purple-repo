@@ -14,7 +14,7 @@ const Accordion = () => {
   };
 
   return (
-    <ul className="accordion">
+    <StyledAccordion>
       {project.map((prj, index) => (
         <AccordionItem
           onToggle={() => handleToggle(index)}
@@ -23,8 +23,13 @@ const Accordion = () => {
           prj={prj}
         />
       ))}
-    </ul>
+    </StyledAccordion>
   );
 };
+
+const StyledAccordion = styled.div`
+  margin: 1em 0;
+  list-style-type: none;
+`;
 
 export default Accordion;
