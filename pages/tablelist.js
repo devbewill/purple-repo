@@ -1,18 +1,19 @@
 import { items } from "./data";
 import Link from "next/link";
 import styled from "styled-components";
-import { Container, Navbar, Logo } from "./components/commons";
+import {
+  Container,
+  Navbar,
+  Logo,
+  Typo,
+  Title,
+  Subtitle,
+  Text,
+} from "./components/commons";
 import TableGrid from "./components/tablelist/tableGrid";
 import Table from "./components/tablelist/table";
 
-const HeroTitle = styled.div`
-  font-size: 12vw;
-  font-weight: 800;
-  letter-spacing: -0.3vw;
-  text-align: right;
-  padding: 0 1rem;
-`;
-export default function Home() {
+function Home() {
   return (
     <>
       <Navbar>
@@ -20,13 +21,19 @@ export default function Home() {
           <Logo>DFHTDI</Logo>
         </Link>
       </Navbar>
+      <Container>
+        <Typo>
+          <Title>Accordion UX & Usability</Title>
+          <Subtitle>An example of Accordion</Subtitle>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque est
+            repellat officiis nesciunt magnam incidunt mollitia consectetur eos
+            maxime ipsam iure optio, minima facilis. In quis mollitia unde nam
+            vero!
+          </Text>
+        </Typo>
+      </Container>
       <Container fullwidth>
-        <h1 className="title">Tablelist</h1>
-
-        <p className="description">
-          Component name: <code className="code">tablelist</code>
-        </p>
-
         <HeroTitle>Project List</HeroTitle>
 
         <TableGrid>
@@ -50,3 +57,13 @@ export default function Home() {
     </>
   );
 }
+
+const HeroTitle = styled.div`
+  font-size: 12vw;
+  font-weight: 800;
+  letter-spacing: -0.3vw;
+  text-align: right;
+  padding: 0 1rem;
+`;
+
+export default Home;
