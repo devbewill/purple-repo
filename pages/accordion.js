@@ -1,7 +1,7 @@
 import { project } from "./data";
 import Link from "next/link";
 import { Container, Navbar, Logo } from "./components/commons";
-import AccordionItem from "./components/accordion/accordionItem";
+import Accordion from "./components/accordion/accordion";
 
 export default function Home() {
   return (
@@ -19,11 +19,13 @@ export default function Home() {
             Component name: <code className="code">accordion</code>
           </p>
 
-          <ul className="accordion">
+          {/* <ul className="accordion">
             {project.map((prj, index) => (
               <AccordionItem key={index} prj={prj} />
             ))}
-          </ul>
+          </ul> */}
+
+          <Accordion />
         </main>
       </Container>
     </>

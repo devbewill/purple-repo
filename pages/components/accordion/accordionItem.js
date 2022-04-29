@@ -1,28 +1,26 @@
 import styled from "styled-components";
-import { useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 
-const AccordionItem = ({ prj }) => {
-  const contentEl = useRef();
-  const [clicked, setClicked] = useState(false);
-  const [contentHeight, setContentHeight] = useState(contentEl);
+const AccordionItem = ({ prj, active, onToggle }) => {
   const { title, description } = prj;
+  const contentEl = useRef();
+  const [contentHeight, setContentHeight] = useState(contentEl);
 
-  const handleToggle = () => {
-    setClicked((prev) => !prev);
+  useEffect(() => {
     setContentHeight(contentEl.current.scrollHeight);
-  };
+  }, []);
 
   return (
-    <li className={`accordion_item ${clicked ? "active" : ""}`}>
-      <Opener onClick={handleToggle}>
+    <li className={`accordion_item ${active ? "active" : ""}`}>
+      <Opener onClick={onToggle}>
         {title}
-        <span className="control">{clicked ? "—" : "+"} </span>
+        <span className="control">{active ? "—" : "+"} </span>
       </Opener>
 
       <ContentWrapper
-        clicked={clicked}
-        contentHeight={contentHeight}
         ref={contentEl}
+        contentHeight={contentHeight}
+        active={active}
       >
         <Description>{description}</Description>
       </ContentWrapper>
@@ -45,7 +43,7 @@ const Opener = styled.button`
 `;
 
 const ContentWrapper = styled.div`
-  height: ${(props) => (props.clicked ? `${props.contentHeight}px` : "0px")};
+  height: ${(props) => (props.active ? `${props.contentHeight}px` : "0px")};
   overflow: hidden;
   transition: all 0.3s ease-out;
 `;
