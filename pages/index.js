@@ -33,10 +33,11 @@ export default function Home() {
         </div>
         <div className="list">
           <ul>
-            {project.map((item, key) => {
+            {project.map((item, index) => {
               return (
                 <Project
-                  key={key}
+                  key={index}
+                  idx={index}
                   title={item.title}
                   text={item.text}
                   picture={item.picture}

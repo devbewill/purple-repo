@@ -11,6 +11,8 @@ import {
 import Accordion from "./components/accordion/accordion";
 
 function Home() {
+  const getLocalStorage = localStorage.getItem("obj");
+  const parsedObj = JSON.parse(getLocalStorage);
   return (
     <>
       <Navbar>
@@ -21,14 +23,9 @@ function Home() {
       <Container>
         <main className="main">
           <Typo>
-            <Title>Accordion UX & Usability</Title>
+            <Title>{parsedObj.title}</Title>
             <Subtitle>An example of Accordion</Subtitle>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque est
-              repellat officiis nesciunt magnam incidunt mollitia consectetur
-              eos maxime ipsam iure optio, minima facilis. In quis mollitia unde
-              nam vero!
-            </Text>
+            <Text>{parsedObj.description}</Text>
           </Typo>
 
           <Accordion />

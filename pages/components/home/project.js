@@ -1,6 +1,35 @@
 import Link from "next/link";
 import styled from "styled-components";
 
+const Project = ({ title, description, link, tags, date, idx }) => {
+  const saveLocalStorage = ({ title, description }) => {
+    let obj = { title: title, description: description };
+    if (typeof window !== "undefined") {
+      localStorage.setItem("obj", JSON.stringify(obj));
+    }
+  };
+
+  return (
+    <Item onClick={() => saveLocalStorage({ title, description })}>
+      <Link href={link} obj={{ title, description }}>
+        <Content>
+          <TagWrapper>
+            {tags.map((tag, key) => {
+              return <Tag className={tag} key={key}></Tag>;
+            })}
+          </TagWrapper>
+
+          <TextWrapper>
+            <Title>{title}</Title>
+            <Description>{description}</Description>
+          </TextWrapper>
+          <Date>{date}</Date>
+        </Content>
+      </Link>
+    </Item>
+  );
+};
+
 const Item = styled.li`
   width: 100%;
   padding: 0.5em 0;
@@ -80,27 +109,4 @@ const Date = styled.div`
     display: block;
   }
 `;
-
-const Project = ({ title, description, link, tags, date }) => {
-  return (
-    <Item>
-      <Link href={link}>
-        <Content>
-          <TagWrapper>
-            {tags.map((tag, key) => {
-              return <Tag className={tag} key={key}></Tag>;
-            })}
-          </TagWrapper>
-
-          <TextWrapper>
-            <Title>{title}</Title>
-            <Description>{description}</Description>
-          </TextWrapper>
-          <Date>{date}</Date>
-        </Content>
-      </Link>
-    </Item>
-  );
-};
-
 export default Project;
