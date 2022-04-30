@@ -1,17 +1,15 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-const Project = ({ title, description, link, tags, date, idx }) => {
-  const saveLocalStorage = ({ title, description }) => {
-    let obj = { title: title, description: description };
-    if (typeof window !== "undefined") {
-      localStorage.setItem("obj", JSON.stringify(obj));
-    }
-  };
-
+const Project = ({ title, description, link, tags, date }) => {
   return (
-    <Item onClick={() => saveLocalStorage({ title, description })}>
-      <Link href={link} obj={{ title, description }}>
+    <Item>
+      <Link
+        href={{
+          pathname: link,
+          query: { title, description },
+        }}
+      >
         <Content>
           <TagWrapper>
             {tags.map((tag, key) => {

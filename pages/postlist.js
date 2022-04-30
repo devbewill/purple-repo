@@ -1,5 +1,6 @@
 import { items } from "./data";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   Container,
   Navbar,
@@ -13,8 +14,8 @@ import PostGrid from "./components/postlist/postGrid";
 import Post from "./components/postlist/post";
 
 export default function Home() {
-  const getLocalStorage = localStorage.getItem("obj");
-  const parsedObj = JSON.parse(getLocalStorage);
+  const router = useRouter();
+  const query = router.query;
   return (
     <>
       <Navbar>
@@ -25,9 +26,9 @@ export default function Home() {
       <Container>
         <main className="main">
           <Typo>
-            <Title>{parsedObj.title}</Title>
+            <Title>{query.title}</Title>
             <Subtitle>An example of Accordion</Subtitle>
-            <Text>{parsedObj.description}</Text>
+            <Text>{query.description}</Text>
           </Typo>
 
           <PostGrid>
