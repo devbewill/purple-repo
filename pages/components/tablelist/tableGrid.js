@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 const TableGrid = ({ items }) => {
   return (
-    <S_grid>
+    <StyledGrid>
       {items.map((item, key) => {
         const { text, title, description, tag, link, year, location } = item;
+
         return (
-          <S_Table key={key}>
-            <div className="row title">{text}</div>
-            <div className="row">
-              <div className="left">Label</div>
-              <div className="right">
+          <StyledTable key={key}>
+            <StyledRowTitle>{text}</StyledRowTitle>
+            <StyledRow>
+              <StyledCell>Label:</StyledCell>
+              <StyledCell right>
                 {tag.map((tag, key) => {
                   return (
                     <Tag className={tag} key={key}>
@@ -18,32 +19,32 @@ const TableGrid = ({ items }) => {
                     </Tag>
                   );
                 })}
-              </div>
-            </div>
-            <div className="row">
-              <div className="left">Link:</div>
-              <div className="right">{link}</div>
-            </div>
-            <div className="row">
-              <div className="left">Year:</div>
-              <div className="right">{year}</div>
-            </div>
-            <div className="row">
-              <div className="left">Location::</div>
-              <div className="right">{location}</div>
-            </div>
-            <div className="row">
-              <div className="left">About:</div>
-              <div className="right">{description}</div>
-            </div>
-          </S_Table>
+              </StyledCell>
+            </StyledRow>
+            <StyledRow>
+              <StyledCell>Link:</StyledCell>
+              <StyledCell right>{link}</StyledCell>
+            </StyledRow>
+            <StyledRow>
+              <StyledCell>Year:</StyledCell>
+              <StyledCell right>{year}</StyledCell>
+            </StyledRow>
+            <StyledRow>
+              <StyledCell>Location::</StyledCell>
+              <StyledCell right>{location}</StyledCell>
+            </StyledRow>
+            <StyledRow>
+              <StyledCell>About:</StyledCell>
+              <StyledCell right>{description}</StyledCell>
+            </StyledRow>
+          </StyledTable>
         );
       })}
-    </S_grid>
+    </StyledGrid>
   );
 };
 
-const S_grid = styled.div`
+const StyledGrid = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding: 40px 8px 60px 16px;
@@ -51,7 +52,7 @@ const S_grid = styled.div`
 }
 `;
 
-const S_Table = styled.div`
+const StyledTable = styled.div`
   font-size: 15px;
   width: 100%;
   min-height: 100px;
@@ -70,8 +71,9 @@ const S_Table = styled.div`
   @media (min-width: 65rem) {
     width: 18%;
   }
+`;
 
-  .row {
+const StyledRow = styled.div`
     display: flex;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -81,24 +83,23 @@ const S_Table = styled.div`
     &:last-child {
       border: 0;
     }
+}
+`;
 
-    .left {
-      overflow: hidden;
-      width: 30%;
-    }
-
-    .right {
-      display: flex;
-      align-items: flex-start;
-      flex: 1;
-    }
-  }
-
-  .title {
+const StyledRowTitle = styled(StyledRow)`
     font-size: 18px;
     line-height: 1;
     font-weight: 600;
-  }
+}
+`;
+
+const StyledCell = styled.div`
+    overflow: ${(props) => (props.right ? "inherit" : "hidden")};
+    width: ${(props) => (props.right ? "auto" : "30%")};
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+}
 `;
 
 const Tag = styled.div`

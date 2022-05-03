@@ -2,24 +2,24 @@ import styled from "styled-components";
 
 const PostGrid = ({ items }) => {
   return (
-    <S_grid xl={2} sm={1}>
+    <StyledGrid xl={2} sm={1}>
       {items.map((post, key) => {
         const { text, description, picture } = post;
         return (
-          <S_post key={key}>
-            <S_imgWrapper>
-              <S_img src={picture} alt={text} />
-            </S_imgWrapper>
-            <S_postTitle>{text}</S_postTitle>
-            <S_postText>{description}</S_postText>
-          </S_post>
+          <StyledPost key={key}>
+            <StyledWrapper>
+              <StyledPicture src={picture} alt={text} />
+            </StyledWrapper>
+            <StyledTitle>{text}</StyledTitle>
+            <StyledText>{description}</StyledText>
+          </StyledPost>
         );
       })}
-    </S_grid>
+    </StyledGrid>
   );
 };
 
-const S_grid = styled.div`
+const StyledGrid = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(${(props) => props.sm}, minmax(0, 1fr));
@@ -30,11 +30,11 @@ const S_grid = styled.div`
   }
 `;
 
-const S_post = styled.a`
+const StyledPost = styled.a`
   display: block;
 `;
 
-const S_imgWrapper = styled.div`
+const StyledWrapper = styled.div`
   position: relative;
   overflow: hidden;
   object-fit: cover;
@@ -44,7 +44,7 @@ const S_imgWrapper = styled.div`
   margin-bottom: 1em;
 `;
 
-const S_img = styled.img`
+const StyledPicture = styled.img`
   position: absolute;
   top: 0px;
   left: 0px;
@@ -54,14 +54,14 @@ const S_img = styled.img`
   object-position: center center;
 `;
 
-const S_postTitle = styled.h3`
+const StyledTitle = styled.h3`
   text-transform: uppercase;
   font-size: 1.5rem;
   color: #333;
   font-weight: 800;
 `;
 
-const S_postText = styled.p`
+const StyledText = styled.p`
   margin: 0.5em 0;
   color: rgb(0 0 0 / 70%);
   font-size: 1.4rem;

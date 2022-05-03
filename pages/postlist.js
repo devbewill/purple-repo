@@ -15,15 +15,13 @@ export default function Home() {
         </Link>
       </S.Navbar>
       <S.Container>
-        <main className="main">
-          <S.Typo>
-            <S.Title>{query.title}</S.Title>
-            <S.Subtitle>An example of Accordion</S.Subtitle>
-            <S.Text>{query.description}</S.Text>
-          </S.Typo>
+        <S.Typo>
+          <S.Title>{query.title}</S.Title>
+          <S.Subtitle>An example of Accordion</S.Subtitle>
+          <S.Text>{query.description}</S.Text>
+        </S.Typo>
 
-          <PostGrid items={items}></PostGrid>
-        </main>
+        <PostGrid items={items}></PostGrid>
       </S.Container>
     </>
   );

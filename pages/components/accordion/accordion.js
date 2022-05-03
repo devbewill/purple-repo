@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import { project } from "../../data";
 
-const Accordion = (props) => {
-  const [clicked, setClicked] = useState("0");
-
+const Accordion = () => {
   const contentEl = useRef();
+  const [clicked, setClicked] = useState("0");
   const [contentHeight, setContentHeight] = useState(contentEl);
+
   const handleToggle = (index) => {
     if (clicked === index) {
       return setClicked("0");
@@ -22,25 +22,21 @@ const Accordion = (props) => {
     <StyledAccordion>
       {project.map((prj, index) => {
         const { title, description } = prj;
-
         return (
-          <li
-            className={`accordion_item ${clicked === index ? "active" : ""}`}
-            key={index}
-          >
-            <Opener onClick={() => handleToggle(index)}>
+          <StyledItem className={clicked === index ? "active" : ""} key={index}>
+            <StyledButton onClick={() => handleToggle(index)}>
               {title}
-              <span className="control">{clicked === index ? "—" : "+"} </span>
-            </Opener>
+              <span>{clicked === index ? "—" : "+"} </span>
+            </StyledButton>
 
-            <ContentWrapper
+            <StyledContent
               ref={contentEl}
               contentHeight={contentHeight}
               active={clicked === index}
             >
-              <Description>{description}</Description>
-            </ContentWrapper>
-          </li>
+              <StyledDescription>{description}</StyledDescription>
+            </StyledContent>
+          </StyledItem>
         );
       })}
     </StyledAccordion>
@@ -52,7 +48,8 @@ const StyledAccordion = styled.div`
   list-style-type: none;
 `;
 
-const Opener = styled.button`
+const StyledItem = styled.li``;
+const StyledButton = styled.button`
   font-family: "Poppins";
   text-transform: uppercase;
   text-align: left;
@@ -69,13 +66,13 @@ const Opener = styled.button`
   padding: 1.5rem;
 `;
 
-const ContentWrapper = styled.div`
+const StyledContent = styled.div`
   height: ${(props) => (props.active ? `${props.contentHeight}px` : "0px")};
   overflow: hidden;
   transition: all 0.3s ease-out;
 `;
 
-const Description = styled.div`
+const StyledDescription = styled.div`
   background: rgb(251 216 38 / 20%);
   font-size: 1.5rem;
   padding: 1.5em;
