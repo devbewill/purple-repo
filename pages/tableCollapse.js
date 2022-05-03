@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as S from "./components/commons";
-import Accordion from "./components/accordion/accordion";
+import { items } from "./data";
+import TableCollapse from "./components/tableCollapse/tableCollapse";
 
 function Home() {
   const router = useRouter();
@@ -15,13 +16,7 @@ function Home() {
       </S.Navbar>
       <S.Container>
         <main className="main">
-          <S.Typo>
-            <S.Title>{query.title}</S.Title>
-            <S.Subtitle>An example of Accordion</S.Subtitle>
-            <S.Text>{query.description}</S.Text>
-          </S.Typo>
-
-          <Accordion />
+          <TableCollapse items={items}></TableCollapse>
         </main>
       </S.Container>
     </>

@@ -198,13 +198,13 @@ export const project = [
     picture: "https://picsum.photos/321/200",
   },
   {
-    title: "Proxyus",
+    title: "Expandable Table",
     text: "Spider",
     tag: ["mint", "ethereum"],
-    description: "An example of accoridon using useRef hooks",
-    link: "http://google.com",
+    description: "Table with collapsable row",
+    link: "./tableCollapse",
     location: "Italy",
-    date: "2022-04-29",
+    date: "2022-05-02",
     picture: "https://picsum.photos/322/200",
   },
   {

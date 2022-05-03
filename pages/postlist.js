@@ -1,15 +1,7 @@
 import { items } from "./data";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {
-  Container,
-  Navbar,
-  Logo,
-  Typo,
-  Title,
-  Subtitle,
-  Text,
-} from "./components/commons";
+import * as S from "./components/commons";
 import PostGrid from "./components/postlist/postGrid";
 import Post from "./components/postlist/post";
 
@@ -18,18 +10,18 @@ export default function Home() {
   const query = router.query;
   return (
     <>
-      <Navbar>
+      <S.Navbar>
         <Link href="/">
-          <Logo>DFHTDI</Logo>
+          <S.Logo>DFHTDI</S.Logo>
         </Link>
-      </Navbar>
-      <Container>
+      </S.Navbar>
+      <S.Container>
         <main className="main">
-          <Typo>
-            <Title>{query.title}</Title>
-            <Subtitle>An example of Accordion</Subtitle>
-            <Text>{query.description}</Text>
-          </Typo>
+          <S.Typo>
+            <S.Title>{query.title}</S.Title>
+            <S.Subtitle>An example of Accordion</S.Subtitle>
+            <S.Text>{query.description}</S.Text>
+          </S.Typo>
 
           <PostGrid>
             {items.map((post, key) => {
@@ -44,7 +36,7 @@ export default function Home() {
             })}
           </PostGrid>
         </main>
-      </Container>
+      </S.Container>
     </>
   );
 }

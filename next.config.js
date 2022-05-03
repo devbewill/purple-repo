@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  styledComponents: true,
+  images: {
+    domains: ["picsum.photos"],
+  },
   experimental: {
-    // Enables the styled-components SWC transform
     styledComponents: true,
+    // Enables the styled-components SWC transform
   },
 };
 

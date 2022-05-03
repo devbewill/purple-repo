@@ -12,6 +12,7 @@ const S_grid = styled.div`
 `;
 
 const PostGrid = (props) => {
+  console.log(props);
   return (
     <S_grid xl={2} sm={1}>
       {props.children}
