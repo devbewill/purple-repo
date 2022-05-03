@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import * as S from "./components/commons";
 import PostGrid from "./components/postlist/postGrid";
-import Post from "./components/postlist/post";
 
 export default function Home() {
   const router = useRouter();
@@ -23,18 +22,7 @@ export default function Home() {
             <S.Text>{query.description}</S.Text>
           </S.Typo>
 
-          <PostGrid>
-            {items.map((post, key) => {
-              return (
-                <Post
-                  key={key}
-                  text={post.text}
-                  description={post.description}
-                  picture={post.picture}
-                ></Post>
-              );
-            })}
-          </PostGrid>
+          <PostGrid items={items}></PostGrid>
         </main>
       </S.Container>
     </>
