@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PostGrid = ({ items }) => {
+function PostGrid({ items }) {
   return (
     <StyledGrid xl={2} sm={1}>
       {items.map((post, key) => {
@@ -17,7 +17,7 @@ const PostGrid = ({ items }) => {
       })}
     </StyledGrid>
   );
-};
+}
 
 const StyledGrid = styled.div`
   display: grid;
