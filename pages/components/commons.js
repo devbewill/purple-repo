@@ -18,13 +18,21 @@ export const Navbar = styled.div`
 `;
 
 export const Logo = styled.div`
-  font-family: "Saira Extra Condensed", sans-serif;
-  padding: 0.5rem 1rem;
-  font-size: 3rem;
-  font-weight: 900;
+  display: inline-block;
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: 800;
   text-transform: uppercase;
   cursor: pointer;
-  color: #ff0060;
+  /* color: #ff0060; */
+  margin: 1vw;
+  padding: 5px 20px;
+  border: 3px solid #222;
+  border-radius: 1em;
+  /* background: url(https://24.media.tumblr.com/tumblr_m87dri70zh1qzla33o1_500.gif);
+  background-size: cover;
+  background-clip: text;
+  text-fill-color: transparent; */
 `;
 
 // Typo block

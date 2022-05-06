@@ -32,7 +32,7 @@ const Project = ({ title, description, link, tags, date }) => {
 const StyledItem = styled.li`
   width: 100%;
   padding: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.5s ease;
 
   .SC {
@@ -40,22 +40,26 @@ const StyledItem = styled.li`
     font-size: 1.8rem;
     text-transform: uppercase;
     font-family: "Poppins";
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: -1px;
     text-align: right;
   }
 
   .title {
     line-height: 1;
-    padding: 0;
-    color: #ff0061;
+    padding: 10px 20px;
+    background: #fff;
+    /* color: #ff0061; */
+    /* background: #9e59fd; */
+    /* color: #fff; */
+    border: 3px solid #222;
     transition: all 0.3s linear;
     display: inline-block;
 
     &:hover {
-      background: yellow;
-      color: #20156d;
-      padding: 0.3em 0;
+      background: #9e59fd;
+      color: #ffffff;
+      transform: translateX(-1em);
     }
 
     @media (min-width: 40rem) {

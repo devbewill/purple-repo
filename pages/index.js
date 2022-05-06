@@ -20,15 +20,18 @@ export default function Home() {
       <div className="home">
         <div className="info">
           <div className="inner">
-            <h3>Don't Forget How To Do It</h3>
-            <p>
-              A personal repository designed with the purpose of not forgetting
-              (as usual) all that I see around the web and that I promise I will
-              implement in my next project.<br></br>
-              <br></br>Perhaps in the near future I will add articles to support
-              each project to share its peculiarity. <br></br> <br></br>
-              Stay tuned!
-            </p>
+            <div className="content">
+              <h3>Don't Forget How To Do It</h3>
+              <p>
+                A personal repository designed with the purpose of not
+                forgetting (as usual) all that I see around the web and that I
+                promise I will implement in my next project.<br></br>
+                <br></br>Perhaps in the near future I will add articles to
+                support each project to share its peculiarity. <br></br>{" "}
+                <br></br>
+                Stay tuned!
+              </p>
+            </div>
           </div>
         </div>
         <div className="list">

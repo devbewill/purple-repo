@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   background: #20156d;
+  background: #fed600;
+
   @media (min-width: 40rem) {
     flex-direction: row;
   }
@@ -10,14 +12,53 @@
 
 .info {
   display: flex;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 5em 0.4em 0 0.4em;
+  font-size: 1rem;
+  padding: 10em 0 0 1em;
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 800;
+  }
 
   @media (min-width: 40rem) {
+    padding: 5em 0.4em 0 0.4em;
+    font-size: 1.3rem;
     min-width: 50vw;
-    padding: 0 5em;
+    padding: 0 6em;
     align-items: center;
+
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.inner {
+  position: relative;
+  border: 3px solid #222;
+  width: 85vw;
+  height: 100vw;
+
+  .content {
+    position: absolute;
+    width: 85vw;
+    height: 100vw;
+    background: rgb(255 255 255);
+    padding: 2em;
+    border: 3px solid #222;
+    left: 20px;
+    top: -20px;
+  }
+
+  @media (min-width: 40rem) {
+    width: 35vw;
+    height: 30vw;
+
+    .content {
+      width: 35vw;
+      height: 30vw;
+    }
   }
 }
 
