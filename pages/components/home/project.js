@@ -12,15 +12,18 @@ const Project = ({ title, description, link, tags, date }) => {
         }}
       >
         <a className="SC">
-          <>
-            {tags.map((tag, key) => {
-              return <div className={tag} key={key}></div>;
-            })}
-          </>
-
           <div>
             <div className="title">{title}</div>
             {/* <div>{description}</div> */}
+            <div className="tags">
+              {tags.map((tag, key) => {
+                return (
+                  <span className={tag} key={key}>
+                    {tag}
+                  </span>
+                );
+              })}
+            </div>
           </div>
           {/* <div>{date}</div> */}
         </a>
@@ -32,38 +35,43 @@ const Project = ({ title, description, link, tags, date }) => {
 const StyledItem = styled.li`
   width: 100%;
   padding: 0;
+  text-align: right;
   border-top: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.5s ease;
 
   .SC {
-    display: block;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-family: "Poppins";
-    font-weight: 900;
-    letter-spacing: -1px;
-    text-align: right;
-  }
-
-  .title {
+    display: inline-block;
     line-height: 1;
     padding: 10px 20px;
     background: #fff;
-    /* color: #ff0061; */
-    /* background: #9e59fd; */
-    /* color: #fff; */
     border: 3px solid #222;
     transition: all 0.3s linear;
-    display: inline-block;
 
     &:hover {
       background: #9e59fd;
       color: #ffffff;
-      transform: translateX(-1em);
+      transform: translateX(-2em);
     }
+  }
+
+  .title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
 
     @media (min-width: 40rem) {
-      font-size: 4.5rem;
+      font-size: 3.5rem;
+      letter-spacing: -1px;
+    }
+  }
+
+  .tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    span {
+      padding: 3px;
     }
   }
 `;
