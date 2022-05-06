@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { project } from "./data";
-import Project from "./components/scrollableList/scrollableList";
+import ScrollableList from "./components/scrollableList/scrollableList";
 import styled from "styled-components";
 import * as S from "./components/commons";
 
@@ -40,7 +40,7 @@ export default function Home() {
           <ul>
             {project.map((item, index) => {
               return (
-                <Project
+                <ScrollableList
                   key={index}
                   idx={index}
                   title={item.title}
@@ -51,7 +51,7 @@ export default function Home() {
                   location={item.location}
                   tags={item.tag}
                   date={item.date}
-                ></Project>
+                ></ScrollableList>
               );
             })}
           </ul>

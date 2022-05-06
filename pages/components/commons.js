@@ -24,6 +24,7 @@ export const Logo = styled.div`
   font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
+  color: #ff0060;
 `;
 
 // Typo block
