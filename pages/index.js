@@ -1,10 +1,18 @@
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { project } from "./data";
 import Project from "./components/home/project";
 import * as S from "./components/commons";
 
 export default function Home() {
+  let initialText =
+    "A personal repository designed with the purpose of not forgetting (as usual) all that I see around the web and that I promise I will implement in my next project.</br></br>Perhaps in the near future I will add articles to support each project to share its peculiarity. </br></br> Stay tuned!";
+
+  const [text, setText] = useState(initialText);
+  const [imagePreview, setImagePreview] = useState("");
+
   return (
     <div>
       <Head>
@@ -22,15 +30,10 @@ export default function Home() {
           <div className="inner">
             <div className="content">
               <h3>Don't Forget How To Do It</h3>
-              <p>
-                A personal repository designed with the purpose of not
-                forgetting (as usual) all that I see around the web and that I
-                promise I will implement in my next project.<br></br>
-                <br></br>Perhaps in the near future I will add articles to
-                support each project to share its peculiarity. <br></br>{" "}
-                <br></br>
-                Stay tuned!
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: text }}></p>
+            </div>
+            <div className="previewWrapper">
+              {imagePreview != "" ? <img src={imagePreview} alt="" /> : ""}
             </div>
           </div>
         </div>
@@ -39,6 +42,9 @@ export default function Home() {
             {project.map((item, index) => {
               return (
                 <Project
+                  initialText={initialText}
+                  setText={setText}
+                  setImagePreview={setImagePreview}
                   key={index}
                   idx={index}
                   title={item.title}

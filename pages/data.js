@@ -174,7 +174,7 @@ export const project = [
     description: "A post list based on css grid",
     link: "/postlist",
     date: "2022-04-25",
-    picture: "https://picsum.photos/330/200",
+    picture: "/images/postgrid.jpg",
   },
   {
     title: "Catalog list",
@@ -184,7 +184,7 @@ export const project = [
     link: "/tablelist",
     location: "Italy",
     date: "2022-04-26",
-    picture: "https://picsum.photos/320/200",
+    picture: "/images/tablelist.jpg",
   },
   {
     title: "Accordion",
@@ -195,7 +195,7 @@ export const project = [
     link: "/accordion",
     location: "Italy",
     date: "2022-04-28",
-    picture: "https://picsum.photos/321/200",
+    picture: "/images/accordion.jpg",
   },
   {
     title: "Expandable Table",
@@ -205,7 +205,7 @@ export const project = [
     link: "/tableCollapse",
     location: "Italy",
     date: "2022-05-02",
-    picture: "https://picsum.photos/322/200",
+    picture: "",
   },
   {
     title: "Scrollable List",
@@ -216,7 +216,7 @@ export const project = [
     link: "/scrollableList",
     location: "Italy",
     date: "2022-04-30",
-    picture: "https://picsum.photos/323/200",
+    picture: "/images/scrollablelist.jpg",
   },
   {
     title: "Brolex",
@@ -227,7 +227,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2022-05-01",
-    picture: "https://picsum.photos/330/200",
+    picture: "",
   },
   {
     title: "Bonder",
@@ -238,7 +238,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2022",
-    picture: "https://picsum.photos/320/200",
+    picture: "",
   },
   {
     title: "Fetish",
@@ -249,7 +249,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2021",
-    picture: "https://picsum.photos/321/200",
+    picture: "",
   },
   {
     title: "Natzukao",
@@ -260,7 +260,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2021",
-    picture: "https://picsum.photos/322/200",
+    picture: "",
   },
   {
     title: "Coliseum",
@@ -271,7 +271,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2021",
-    picture: "https://picsum.photos/323/200",
+    picture: "",
   },
   {
     title: "Blocker",
@@ -282,7 +282,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2022",
-    picture: "https://picsum.photos/330/200",
+    picture: "",
   },
   {
     title: "Spotter",
@@ -293,7 +293,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2022",
-    picture: "https://picsum.photos/320/200",
+    picture: "",
   },
   {
     title: "Anversa",
@@ -304,7 +304,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2021",
-    picture: "https://picsum.photos/321/200",
+    picture: "",
   },
   {
     title: "Milano",
@@ -315,7 +315,7 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2021",
-    picture: "https://picsum.photos/322/200",
+    picture: "",
   },
   {
     title: "Selenium",
@@ -326,6 +326,6 @@ export const project = [
     link: "http://google.com",
     location: "Italy",
     date: "2021",
-    picture: "https://picsum.photos/323/200",
+    picture: "",
   },
 ];

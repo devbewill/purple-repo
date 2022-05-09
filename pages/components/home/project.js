@@ -1,8 +1,29 @@
+import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import * as S from "../commons";
 
-const Project = ({ title, description, link, tags, date }) => {
+const Project = ({
+  title,
+  description,
+  link,
+  tags,
+  date,
+  picture,
+  initialText,
+  setText,
+  setImagePreview,
+}) => {
+  const setPreview = (picture, description) => {
+    picture ? setImagePreview(picture) : setImagePreview("");
+    description ? setText(description) : setText(initialText);
+  };
+
+  const unsetPreview = () => {
+    setImagePreview("");
+    setText(initialText);
+  };
+
   return (
     <StyledItem>
       <Link
@@ -11,19 +32,25 @@ const Project = ({ title, description, link, tags, date }) => {
           query: { title, description },
         }}
       >
-        <a className="SC">
+        <a
+          className="SC"
+          // onMouseOver={() => setText(description)}
+          // onMouseLeave={() => setText(initialText)}
+          onMouseOver={() => setPreview(picture, description)}
+          onMouseLeave={() => unsetPreview()}
+        >
           <div>
             <div className="title">{title}</div>
             {/* <div>{description}</div> */}
-            <div className="tags">
+            {/* <div className="tags">
               {tags.map((tag, key) => {
                 return (
-                  <span className={tag} key={key}>
+                  <Tag className={tag} key={key}>
                     {tag}
-                  </span>
+                  </Tag>
                 );
               })}
-            </div>
+            </div> */}
           </div>
           {/* <div>{date}</div> */}
         </a>
@@ -42,13 +69,13 @@ const StyledItem = styled.li`
   .SC {
     display: inline-block;
     line-height: 1;
-    padding: 10px 20px;
+
     background: #fff;
     border: 3px solid #222;
     transition: all 0.3s linear;
 
     &:hover {
-      background: #9e59fd;
+      background: #000;
       color: #ffffff;
       transform: translateX(-2em);
     }
@@ -58,9 +85,10 @@ const StyledItem = styled.li`
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 900;
+    padding: 10px 20px 10px 20px;
 
     @media (min-width: 40rem) {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       letter-spacing: -1px;
     }
   }
@@ -73,6 +101,38 @@ const StyledItem = styled.li`
     span {
       padding: 3px;
     }
+  }
+`;
+
+const Tag = styled.div`
+  display: block;
+  width: 100%;
+  line-height: 1.3;
+  margin: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  text-transform: Uppercase;
+
+  &.nft {
+    background: #48f1ab;
+  }
+  &.polygon {
+    background: #f7a1d7;
+  }
+  &.design {
+    background: #af7dff;
+  }
+  &.styled {
+    background: #ffb560;
+  }
+  &.ethereum {
+    background: #75acfa;
+  }
+  &.web3 {
+    background: #fdbebe;
+  }
+  &.mint {
+    background: #aaf7a7;
   }
 `;
 
