@@ -5,8 +5,11 @@ function NftHomeSection({ items }) {
   return (
     <StyledGrid>
       <StyledTextSide>
-        <h2>Discover A New Era Of Cool</h2>
-        <h3>Bored Of Apes? Try Something New.</h3>
+        <h2>URBAN MOGUL</h2>
+        <p>
+          Stop wasting money on hopeless NFT projects. Try something new with
+          behind the real project.
+        </p>
         <button>Explore</button>
       </StyledTextSide>
       <StyledPictureSide>
@@ -21,8 +24,8 @@ function NftHomeSection({ items }) {
         <StyledImageWrapper>
           <Image
             src="/images/animated.gif"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             layout="responsive"
           ></Image>
         </StyledImageWrapper>
@@ -33,7 +36,7 @@ function NftHomeSection({ items }) {
 
 const StyledGrid = styled.div`
   display: flex;
-  min-height: 80vh;
+  min-height: calc(100vh - 5em);
   margin: 0px auto;
   justify-content: center;
   align-items: center;
@@ -44,49 +47,47 @@ const StyledGrid = styled.div`
 `;
 
 const StyledTextSide = styled.div`
-  font-family: "Sora", sans-serif;
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   h2 {
-    font-size: 3em;
-    text-transform: capitalize;
-    width: 80%;
-    color: rgb(32, 32, 32);
-    align-self: flex-start;
-    line-height: 1.15;
-    font-weight: 600;
+    font-size: 6rem;
+    line-height: 0.9;
+    font-weight: 900;
   }
 
-  h3 {
-    font-size: 1.25em;
-    text-transform: capitalize;
-    color: rgba(32, 32, 32, 0.6);
-    font-weight: 400;
-    margin-bottom: 1rem;
-    width: 80%;
-    align-self: flex-start;
-    padding: 20px 0;
+  p {
+    font-size: 1.25rem;
+    color: rgb(0 0 0 / 60%);
+  }
+
+  button {
+    background: #000;
+    color: #fff;
+    padding: 0.8em 1em;
+    border: 0;
+    border-radius: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+    align-self: baseline;
+    margin: 0.5em 0;
   }
 
   @media (max-width: 48em) {
-    width: 100%;
-    align-self: center;
+    width: 90%;
     text-align: center;
 
     h2 {
-      margin-top: 1em;
-      width: 100%;
-      font-size: 2rem;
+      padding-top: 1em;
+      font-size: 2.2rem;
     }
 
-    h3 {
-      width: 100%;
-      font-size: 1rem;
+    button {
+      align-self: normal;
     }
   }
 `;
