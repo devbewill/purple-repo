@@ -219,12 +219,11 @@ export const project = [
     picture: "/images/scrollablelist.jpg",
   },
   {
-    title: "Brolex",
+    title: "NFT home",
     text: "Mogul",
-    tag: ["design"],
-    description:
-      "Phasellus sagittis odio id eleifend vestibulum. Vivamus vulputate sapien in.",
-    link: "http://google.com",
+    tag: ["nft"],
+    description: "A fancy nft home section",
+    link: "/nfthome",
     location: "Italy",
     date: "2022-05-01",
     picture: "",

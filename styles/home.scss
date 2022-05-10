@@ -49,6 +49,8 @@
     border: 3px solid #222;
     left: 20px;
     top: -20px;
+
+    transition: all 0.5s linear;
   }
 
   @media (min-width: 40rem) {
@@ -68,9 +70,9 @@
     width: 730px;
 
     img {
-      border: 3px solid #000;
-      background: #fff;
+      border: 3px solid black;
       padding: 1em;
+      background: #fff;
       position: absolute;
       right: -350px;
       top: 100px;

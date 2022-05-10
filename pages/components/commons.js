@@ -6,7 +6,7 @@ export const Page = styled.div`
   background: #fbf6ec;
 `;
 export const Container = styled.div`
-  max-width: ${(props) => (props.fullwidth ? "none" : "65rem")};
+  max-width: ${(props) => (props.fullwidth ? "none" : "75rem")};
   margin: 0 auto;
   padding-top: 5em;
 `;
