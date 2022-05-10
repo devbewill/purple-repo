@@ -2,16 +2,17 @@ import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import { project } from "../../data";
 
-const Accordion = () => {
-  const contentEl = useRef();
-  const [clicked, setClicked] = useState("0");
-  const [contentHeight, setContentHeight] = useState(contentEl);
+const Accordion = (props) => {
+  const contentEl = useRef(null);
+  const [clicked, setClicked] = useState();
+  const [contentHeight, setContentHeight] = useState(0);
 
   const handleToggle = (index) => {
     if (clicked === index) {
       return setClicked("0");
     }
     setClicked(index);
+    setContentHeight(contentEl.current.scrollHeight);
   };
 
   useEffect(() => {
@@ -101,7 +102,7 @@ const StyledInfo = styled.div`
 `;
 
 const StyledDescription = styled.div`
-  background: rgb(255 217 123);
+  background: rgb(255 134 215);
   font-size: 1.5rem;
   padding: 1.5em;
   border: 2px solid #000;

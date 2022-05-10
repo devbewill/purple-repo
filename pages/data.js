@@ -171,7 +171,7 @@ export const project = [
     title: "Post grid",
     text: "Watux",
     tag: ["design", "styled comp"],
-    description: "A post list based on css grid",
+    description: "A post list based on css grid. ",
     link: "/postlist",
     location: "Italy",
     date: "2022-04-25",
@@ -192,7 +192,7 @@ export const project = [
     text: "Phanter",
     tag: ["design", "styled comp"],
     description:
-      "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium, Tenetur ullam rerum.",
+      "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium, Tenetur ullam rerum. Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium, Tenetur ullam rerum.",
     link: "/accordion",
     location: "Italy",
     date: "2022-04-28",
