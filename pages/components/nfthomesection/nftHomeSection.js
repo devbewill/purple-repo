@@ -1,7 +1,8 @@
 import Image from "next/image";
+import * as S from "../commons";
 import styled from "styled-components";
 
-function NftHomeSection({ items }) {
+function NftHomeSection() {
   return (
     <StyledGrid>
       <StyledTextSide>
@@ -10,17 +11,9 @@ function NftHomeSection({ items }) {
           Stop wasting money on hopeless NFT projects. Try something new with
           behind the real project.
         </p>
-        <button>Explore</button>
+        <S.Button>Explore</S.Button>
       </StyledTextSide>
       <StyledPictureSide>
-        {/* <StyledVideoWrapper>
-          <video
-            src="/images/nft-video.mp4"
-            type="video/mp4"
-            autoplay=""
-            loop
-          ></video>
-        </StyledVideoWrapper> */}
         <StyledImageWrapper>
           <Image
             src="/images/animated.gif"
@@ -63,20 +56,6 @@ const StyledTextSide = styled.div`
     color: rgb(0 0 0 / 60%);
   }
 
-  button {
-    background: #000;
-    color: #fff;
-    padding: 0.8em 1em;
-    border: 0;
-    border-radius: 2em;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.1rem;
-    display: inline-block;
-    align-self: baseline;
-    margin: 0.5em 0;
-  }
-
   @media (max-width: 48em) {
     width: 90%;
     text-align: center;
@@ -84,10 +63,6 @@ const StyledTextSide = styled.div`
     h2 {
       padding-top: 1em;
       font-size: 2.2rem;
-    }
-
-    button {
-      align-self: normal;
     }
   }
 `;
@@ -121,29 +96,5 @@ const StyledVideoWrapper = styled.div`
     }
 }
 `;
-
-// const StyledPictureSide = styled.div`
-//   width: 50%;
-//   height: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-
-//   .image {
-//     object-fit: contain;
-//     width: 100% !important;
-//     position: relative !important;
-//     height: unset !important;
-//   }
-
-//   > div {
-//     position: unset !important;
-//   }
-
-//   @media (max-width: 48em) {
-//     width: 100%;
-//   }
-// `;
 
 export default NftHomeSection;

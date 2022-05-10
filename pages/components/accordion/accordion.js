@@ -21,11 +21,15 @@ const Accordion = () => {
   return (
     <StyledAccordion>
       {project.map((prj, index) => {
-        const { title, description } = prj;
+        const { title, text, location, description, date } = prj;
+
         return (
           <StyledItem className={clicked === index ? "active" : ""} key={index}>
             <StyledButton onClick={() => handleToggle(index)}>
-              {title}
+              <div className="title">{title}</div>
+              <div className="text">{text}</div>
+              <div>{location}</div>
+              <div>{date}</div>
               <span>{clicked === index ? "—" : "+"} </span>
             </StyledButton>
 
@@ -50,20 +54,38 @@ const StyledAccordion = styled.div`
 
 const StyledItem = styled.li``;
 const StyledButton = styled.button`
-  font-family: "Poppins";
-  text-transform: uppercase;
   text-align: left;
-  font-weight: 600;
-  font-size: 1.5rem;
-  border: 0;
+  border: 2px solid #000;
+  border-bottom: 0;
   display: flex;
+  justify-content: end;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
   cursor: pointer;
-  background: #fcd927;
-  margin-top: 5px;
-  padding: 1.5rem;
+  background: transparent;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+
+  .title {
+    font-weight: 600;
+    font-family: "Saira Extra Condensed";
+    font-size: 3rem;
+    width: 30%;
+  }
+
+  .text {
+    font-size: 1.9rem;
+  }
+
+  div {
+    width: 20%;
+  }
+
+  span {
+    width: 100px;
+    font-size: 3rem;
+  }
 `;
 
 const StyledContent = styled.div`
@@ -72,10 +94,14 @@ const StyledContent = styled.div`
   transition: all 0.3s ease-out;
 `;
 
+const StyledItemRow = styled.div``;
+
 const StyledDescription = styled.div`
-  background: rgb(251 216 38 / 20%);
+  background: rgb(251 216 38);
   font-size: 1.5rem;
   padding: 1.5em;
+  border: 2px solid #000;
+  border-bottom: 0;
 `;
 
 export default Accordion;

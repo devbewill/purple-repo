@@ -17,6 +17,23 @@ export const Navbar = styled.div`
   padding: 0.1em;
 `;
 
+export const Button = styled.button`
+  background: #000;
+  color: #fff;
+  padding: 0.8em 1em;
+  border: 0;
+  border-radius: 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-block;
+  align-self: baseline;
+  margin: 0.5em 0;
+  @media (max-width: 48em) {
+    align-self: normal;
+  }
+`;
+
 export const Logo = styled.div`
   display: inline-block;
   line-height: 1;

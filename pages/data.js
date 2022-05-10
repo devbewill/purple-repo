@@ -173,6 +173,7 @@ export const project = [
     tag: ["design", "styled comp"],
     description: "A post list based on css grid",
     link: "/postlist",
+    location: "Italy",
     date: "2022-04-25",
     picture: "/images/postgrid.jpg",
   },
