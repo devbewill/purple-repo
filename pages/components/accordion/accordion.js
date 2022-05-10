@@ -26,10 +26,12 @@ const Accordion = () => {
         return (
           <StyledItem className={clicked === index ? "active" : ""} key={index}>
             <StyledButton onClick={() => handleToggle(index)}>
-              <div className="title">{title}</div>
-              <div className="text">{text}</div>
-              <div>{location}</div>
-              <div>{date}</div>
+              <StyledInfo>
+                <div className="title">{title}</div>
+                <div className="text">{text}</div>
+                <div>{location}</div>
+                <div>{date}</div>
+              </StyledInfo>
               <span>{clicked === index ? "—" : "+"} </span>
             </StyledButton>
 
@@ -54,33 +56,13 @@ const StyledAccordion = styled.div`
 
 const StyledItem = styled.li``;
 const StyledButton = styled.button`
-  text-align: left;
+  width: 100%;
+  background: transparent;
   border: 2px solid #000;
   border-bottom: 0;
   display: flex;
-  justify-content: end;
-  width: 100%;
-  cursor: pointer;
-  background: transparent;
-  padding: 1rem;
-  display: flex;
   align-items: center;
-  font-size: 1.2rem;
-
-  .title {
-    font-weight: 600;
-    font-family: "Saira Extra Condensed";
-    font-size: 3rem;
-    width: 30%;
-  }
-
-  .text {
-    font-size: 1.9rem;
-  }
-
-  div {
-    width: 20%;
-  }
+  cursor: pointer;
 
   span {
     width: 100px;
@@ -94,10 +76,32 @@ const StyledContent = styled.div`
   transition: all 0.3s ease-out;
 `;
 
-const StyledItemRow = styled.div``;
+const StyledInfo = styled.div`
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding: 0.5em 2em;
+  text-align: left;
+  font-size: 1.2rem;
+
+  div {
+    width: 20%;
+  }
+
+  .title {
+    width: 35%;
+    font-weight: 600;
+    font-family: "Saira Extra Condensed";
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 1.9rem;
+  }
+`;
 
 const StyledDescription = styled.div`
-  background: rgb(251 216 38);
+  background: rgb(255 217 123);
   font-size: 1.5rem;
   padding: 1.5em;
   border: 2px solid #000;
