@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import * as S from "./components/commons";
 import { items } from "./data";
-import TableCollapse from "./components/tableCollapse/tableCollapse";
+import InlineForm from "./components/inlineForm/inlineForm";
 
 function Home() {
   const router = useRouter();
@@ -14,9 +14,9 @@ function Home() {
           <S.Logo>DFHTDI</S.Logo>
         </Link>
       </S.Navbar>
-      <S.Container>
+      <S.Container fullwidth style={{ backgroundColor: "#ffe151" }}>
         <main className="main">
-          <TableCollapse items={items}></TableCollapse>
+          <InlineForm items={items}></InlineForm>
         </main>
       </S.Container>
     </>

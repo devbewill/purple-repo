@@ -4,6 +4,8 @@
   flex-direction: column;
   // background: #fed600;
   background: rgb(182 0 254 / 20%);
+  background: #fbc7c2;
+  background: #e1fa00;
 
   @media (min-width: 40rem) {
     flex-direction: row;
@@ -54,11 +56,11 @@
   }
 
   @media (min-width: 40rem) {
-    width: 26vw;
+    width: 30vw;
     height: 25vw;
 
     .content {
-      width: 26vw;
+      width: 30vw;
       height: 25vw;
     }
   }
@@ -74,7 +76,7 @@
       padding: 1em;
       background: #fff;
       position: absolute;
-      right: -350px;
+      right: -400px;
       top: 100px;
       width: 90%;
       height: 90%;
@@ -92,4 +94,11 @@
     max-height: 100vh;
     overflow-y: scroll;
   }
+}
+
+.title-test {
+  font-family: "Titillium web", sans-serif;
+  text-transform: uppercase;
+  font-size: 10rem;
+  line-height: 0.75;
 }

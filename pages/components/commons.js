@@ -9,6 +9,7 @@ export const Container = styled.div`
   max-width: ${(props) => (props.fullwidth ? "none" : "75rem")};
   margin: 0 auto;
   padding-top: 5em;
+  min-height: 100vh;
 `;
 
 export const Navbar = styled.div`

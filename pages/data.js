@@ -199,11 +199,11 @@ export const project = [
     picture: "/images/accordion.jpg",
   },
   {
-    title: "Expandable Table",
+    title: "Inline form",
     text: "Spider",
     tag: ["mint", "ethereum"],
-    description: "Table with collapsable row",
-    link: "/tableCollapse",
+    description: "Cool Inline form ",
+    link: "/inlineForm",
     location: "Italy",
     date: "2022-05-02",
     picture: "",
@@ -327,5 +327,18 @@ export const project = [
     location: "Italy",
     date: "2021",
     picture: "",
+  },
+];
+
+export const pricing = [
+  {
+    job: "developer",
+    activity: "Website",
+    cost: 1500,
+  },
+  {
+    job: "designer",
+    activity: "UI design",
+    cost: 1000,
   },
 ];

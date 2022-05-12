@@ -1,0 +1,54 @@
+  var has = {
+    name: "ste",
+    surname: "perelli",
+    skills: {
+      football: true,
+      basketball: true,
+      volleyball: true,
+    },
+  };
+
+  var pas = {
+    name: "ste",
+    surname: "galli",
+    skills: {
+      football: true,
+      basketball: false,
+      volleyball: false,
+    },
+  };
+
+  const compare = (Obj1, Obj2) => {
+    var values1 = Object.values(Obj1);
+    var values2 = Object.values(Obj2);
+    var equivalent = [];
+
+    var keys = Object.keys(Obj1);
+    // output: keys = ["name","surname","skills"];
+    keys.forEach((k) => {
+      // k=name, k=surname k= skills -> run 3 times
+      if (Obj1.hasOwnProperty(k) && Obj2.hasOwnProperty(k)) {
+        // if Obj1 has name prop && Obj2 has name prop
+        if (Obj1[k] === Obj2[k]) {
+          //so we know the prop exist so check if the Values match
+          //name: ste === ste -> push
+          //surname: perelli === galli dont push
+          equivalent.push(Obj1[k]);
+        }
+      }
+    });
+
+    console.log(equivalent);
+  };
+
+  compare(has, pas);
+
+
+
+  -----
+
+
+  //   row = this.props.cells.map((cell, i) => (cell.URL != null && cell.URL.length > 0) ?
+  //         (<td className={cell.Meta.HTMLClass} key={i}>{cell.Text}</td>) :
+  //         (<td className={cell.Meta.HTMLClass} key={i}>{cell.Text}</td>)
+  // );

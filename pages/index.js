@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import { project } from "./data";
 import Project from "./components/home/project";
 import * as S from "./components/commons";

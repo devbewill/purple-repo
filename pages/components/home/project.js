@@ -78,17 +78,19 @@ const StyledItem = styled.li`
       background: #000;
       color: #ffffff;
       transform: translateX(-2em);
+      line-height: 2;
     }
   }
 
   .title {
-    font-size: 1.5rem;
+    font-family: "Titillium web", sans-serif;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 900;
     padding: 10px 20px 10px 20px;
 
     @media (min-width: 40rem) {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       letter-spacing: -1px;
     }
   }

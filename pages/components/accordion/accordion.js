@@ -2,22 +2,17 @@ import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import { project } from "../../data";
 
-const Accordion = (props) => {
-  const contentEl = useRef(null);
+const Accordion = () => {
+  const contentEl = useRef([]);
   const [clicked, setClicked] = useState();
-  const [contentHeight, setContentHeight] = useState(0);
 
-  const handleToggle = (index) => {
+  const handleToggle = (index, node) => {
+    console.log(node);
     if (clicked === index) {
       return setClicked("0");
     }
     setClicked(index);
-    setContentHeight(contentEl.current.scrollHeight);
   };
-
-  useEffect(() => {
-    setContentHeight(contentEl.current.scrollHeight);
-  }, []);
 
   return (
     <StyledAccordion>
@@ -26,7 +21,7 @@ const Accordion = (props) => {
 
         return (
           <StyledItem className={clicked === index ? "active" : ""} key={index}>
-            <StyledButton onClick={() => handleToggle(index)}>
+            <StyledButton onClick={(node) => handleToggle(index, node)}>
               <StyledInfo>
                 <div className="title">{title}</div>
                 <div className="text">{text}</div>
@@ -37,8 +32,12 @@ const Accordion = (props) => {
             </StyledButton>
 
             <StyledContent
-              ref={contentEl}
-              contentHeight={contentHeight}
+              ref={(node) => (contentEl.current[index] = node)}
+              contentHeight={
+                contentEl.current[index]
+                  ? contentEl.current[index].scrollHeight
+                  : 0
+              }
               active={clicked === index}
             >
               <StyledDescription>{description}</StyledDescription>
@@ -102,7 +101,7 @@ const StyledInfo = styled.div`
 `;
 
 const StyledDescription = styled.div`
-  background: rgb(255 134 215);
+  background: #fbc7c2;
   font-size: 1.5rem;
   padding: 1.5em;
   border: 2px solid #000;
