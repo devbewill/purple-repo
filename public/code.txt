@@ -1,0 +1,53 @@
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import styled from "styled-components";
+import { pricing, project } from "../../data";
+
+const InlineForm = () => {
+  const { register, handleSubmit } = useForm();
+  const [formData, setFormData] = useState({});
+  const [result, setResult] = useState({});
+  const [visible, setVisible] = useState(false);
+
+  const onSubmit = (data) => showResult(data);
+
+  const showResult = (data) => {
+    setFormData(data);
+    let obj = Object.values(pricing);
+    let temp = [];
+    obj.map((val, i) => val.job === data.job && setResult(...temp, val));
+    setVisible(true);
+  };
+
+  useEffect(() => {}, []);
+  return (
+    <Container>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        My name is
+        <input {...register("name")} type="text" size="7" height="100" />
+        <br></br> i'm a
+        <select {...register("job")} height="100">
+          <option value=""></option>
+          <option value="designer">designer</option>
+          <option value="developer">developer</option>
+        </select>
+        and my annual salary is
+        <input {...register("ral")} type="text" size="5" className="ral" />
+        <br></br>
+        <input type="submit" value="calculate" />
+      </Form>
+      {visible ? (
+        <Result>
+          Good news <span>{formData.name}</span>! <br></br>
+          As a freelancer you would just need to do{" "}
+          <span>
+            {Math.round(formData.ral / result.cost)} {result.activity}
+          </span>{" "}
+          (average <span>${result.cost} / each</span>) to get the same income.
+        </Result>
+      ) : (
+        <div></div>
+      )}
+    </Container>
+  );
+};

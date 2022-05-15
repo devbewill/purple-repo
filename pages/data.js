@@ -230,12 +230,11 @@ export const project = [
     picture: "",
   },
   {
-    title: "Bonder",
+    title: "CodeBlock",
     text: "Flokis",
     tag: ["nft", "mint"],
-    description:
-      "Mauris ultrices arcu a orci gravida maximus. Aliquam a dapibus.",
-    link: "http://google.com",
+    description: "Syntax code block from local file.",
+    link: "/syntaxHighlighter",
     location: "Italy",
     date: "2022",
     picture: "",
