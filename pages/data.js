@@ -240,12 +240,12 @@ export const project = [
     picture: "",
   },
   {
-    title: "ObjectTricks",
+    title: "Frosty",
     text: "Bad tre",
     tag: ["javascript"],
     description:
       "Sed fermentum velit urna, vitae aliquam risus fringilla nec. Quisque consectetur dolor.",
-    link: "/objecttricks",
+    link: "/",
     location: "Italy",
     date: "2021",
     picture: "",

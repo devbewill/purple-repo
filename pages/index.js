@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <S.Navbar>
-        <Link href="/">
+        <Link href="/" passHref>
           <S.Logo>DFHTDI</S.Logo>
         </Link>
       </S.Navbar>

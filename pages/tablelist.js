@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       <S.Navbar>
-        <Link href="/">
+        <Link href="/" passHref>
           <S.Logo>DFHTDI</S.Logo>
         </Link>
       </S.Navbar>

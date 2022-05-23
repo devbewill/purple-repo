@@ -25,7 +25,7 @@ const InlineForm = () => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         My name is
         <input {...register("name")} type="text" size="7" height="100" />
-        <br></br> i'm a
+        <br></br> im a
         <select {...register("job")} height="100">
           <option value=""></option>
           <option value="designer">designer</option>

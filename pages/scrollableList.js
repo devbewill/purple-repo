@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <S.Navbar>
-        <Link href="/">
+        <Link href="/" passHref>
           <S.Logo>DFHTDI</S.Logo>
         </Link>
       </S.Navbar>
@@ -25,7 +25,7 @@ export default function Home() {
       <S.Container fullwidth>
         <StyledInfo>
           <StyledInner>
-            <h3>Don't Forget How To Do It</h3>
+            <h3>Dont Forget How To Do It</h3>
             <p>
               A personal XXX designed with the purpose of not forgetting (as
               usual) all that I see around the web and that I promise I will
