@@ -28,7 +28,7 @@ export default function Home() {
         <div className="info">
           <div className="inner">
             <div className="content">
-              <h3>Don't Forget How To Do It</h3>
+              <h3>Dont Forget How To Do It</h3>
               <p dangerouslySetInnerHTML={{ __html: text }}></p>
             </div>
             <div className="previewWrapper">
