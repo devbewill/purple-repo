@@ -1,3 +1,4 @@
+import ReactTooltip from "react-tooltip";
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 
@@ -18,7 +19,18 @@ function FormGenerator({ quadriPF }) {
   return (
     <>
       <StyledForm className="">
+        <ReactTooltip />
         <Title>QUADRO LM</Title>
+        <Note>
+          Viene automaticamente generata una riga per ogni riga del quadro.
+          <br></br>
+          Per ogni riga viene fatto un check sul numero di campi presente, se
+          tale numero è maggiore di 5 viene creata una nuova colonna per non
+          rendere troppo piccoli i campi.<br></br>
+          In questo modo si riesce ad ottenere un{" "}
+          <em>effetto pdf redditi PF</em> senza dover definire a mano il numero
+          di colonne di ogni riga, cosa non manutenibile
+        </Note>
         <div className="container">
           <RowGenerator refactorObj={refactorObj}></RowGenerator>
         </div>
@@ -36,23 +48,38 @@ export const RowGenerator = ({ refactorObj }) => {
 };
 
 export const ColsGenerator = (props) => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState();
+  const { obj, i, colGrid } = props;
+
+  const randomNumberGenerator = () => {
+    let randomNumber = (Math.random() * (10000.0 - 1.0 + 1.0) + 1.0).toFixed(2);
+    return randomNumber;
+  };
+
+  const newArr = obj.columns.map((element) => ({
+    ...element,
+    random: randomNumberGenerator(),
+  }));
 
   useEffect(() => {
-    setValue((Math.random() * (10000.0 - 1.0 + 1.0) + 1.0).toFixed(2));
+    ReactTooltip.rebuild();
   }, []);
-  const { obj, i, colGrid } = props;
+
   return (
     <Riga key={i}>
       <p> {obj.section}</p>
       <div className="row">
-        {obj.columns.map((col, i) => (
+        {newArr.map((col, i) => (
           <div key={i} className={`col col-lg-${colGrid}`}>
-            <span className="fieldDescription">{col.desc}</span>
-            <div className="innerField">
-              <span className="campo">{col.col}</span>
-              <p className="amount">{value}</p>
-            </div>
+            <span data-tip={col.random}>{col.desc}</span>
+
+            <input
+              name={col.desc}
+              className="innerField"
+              placeholder={col.random}
+              value={value}
+            ></input>
+            <span className="campo">{col.col}</span>
           </div>
         ))}
       </div>
@@ -88,18 +115,14 @@ const Riga = styled.div`
     width: 5vw;
     font-size: 1rem;
     font-weight: 300;
-    &.amount {
-      width: 80%;
-      display: inline-block;
-      font-weight: 600;
-      line-height: 2;
-      padding: 0 3px;
-      font-family: monospace;
-    }
   }
 
   .row {
     width: 100%;
+
+    .inputWrapper {
+      position: relative;
+    }
 
     .fieldDescription {
       display: block;
@@ -111,17 +134,36 @@ const Riga = styled.div`
     }
     .innerField {
       background: #f4f4f4;
+      width: 100%;
       color: #000;
       padding: 5px;
       text-align: right;
-
-      .campo {
-        font-size: 0.6rem;
-        float: left;
-        color: #999;
-      }
+      border: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 2;
+      padding: 5px;
+      font-family: monospace;
+      color: blue;
+    }
+    .campo {
+      position: absolute;
+      top: 24px;
+      left: 17px;
+      font-size: 0.6rem;
+      float: left;
+      color: #999;
     }
   }
+`;
+
+const Note = styled.div`
+  position: fixed;
+  top: 10vh;
+  right: 2vw;
+  width: 20vw;
+  padding: 1em;
+  background: pink;
 `;
 
 // const Title = styled.div`
