@@ -2,8 +2,8 @@ import { items } from "./data";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
-import * as S from "./components/commons";
-import TableGrid from "./components/tablelist/tableGrid";
+import * as S from "../components/commons";
+import TableGrid from "../components/tablelist/tableGrid";
 
 function Home() {
   const router = useRouter();

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import * as S from "./components/commons";
-import Accordion from "./components/accordion/accordion";
+import * as S from "../components/commons";
+import Accordion from "../components/accordion/accordion";
 
 function Home() {
   const router = useRouter();

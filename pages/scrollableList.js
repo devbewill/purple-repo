@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { project } from "./data";
-import ScrollableList from "./components/scrollableList/scrollableList";
+import ScrollableList from "../components/scrollableList/scrollableList";
 import styled from "styled-components";
-import * as S from "./components/commons";
+import * as S from "../components/commons";
 
 export default function Home() {
   const router = useRouter();

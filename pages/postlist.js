@@ -1,8 +1,8 @@
 import { items } from "./data";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import * as S from "./components/commons";
-import PostGrid from "./components/postlist/postGrid";
+import * as S from "../components/commons";
+import PostGrid from "../components/postlist/postGrid";
 
 export default function Home() {
   const router = useRouter();

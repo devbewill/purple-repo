@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import * as S from "./components/commons";
+import * as S from "../components/commons";
 import { items } from "./data";
-import CodeBlock from "./components/syntaxHighLighter/codeblock";
+import CodeBlock from "../components/syntaxHighLighter/codeblock";
 
 function Home() {
   const router = useRouter();
