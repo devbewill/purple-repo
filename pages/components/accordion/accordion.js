@@ -2,12 +2,11 @@ import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import { project } from "../../data";
 
-const Accordion = () => {
+const Accordion = (props) => {
   const contentEl = useRef([]);
   const [clicked, setClicked] = useState();
 
-  const handleToggle = (index, node) => {
-    console.log(node);
+  const handleToggle = (index) => {
     if (clicked === index) {
       return setClicked("0");
     }
@@ -21,7 +20,7 @@ const Accordion = () => {
 
         return (
           <StyledItem className={clicked === index ? "active" : ""} key={index}>
-            <StyledButton onClick={(node) => handleToggle(index, node)}>
+            <StyledButton onClick={() => handleToggle(index)}>
               <StyledInfo>
                 <div className="title">{title}</div>
                 <div className="text">{text}</div>
