@@ -20,6 +20,7 @@ function NftHomeSection() {
             width={600}
             height={600}
             layout="responsive"
+            alt="preview"
           ></Image>
         </StyledImageWrapper>
       </StyledPictureSide>

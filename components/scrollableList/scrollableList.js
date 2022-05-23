@@ -5,6 +5,7 @@ const ScrollableList = ({ title, description, link, tags, date }) => {
   return (
     <Item>
       <Link
+        passHref
         href={{
           pathname: link,
           query: { title, description },

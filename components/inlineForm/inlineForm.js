@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
-import { pricing, project } from "../../data";
+import { pricing, project } from "../../pages/data";
 
 const InlineForm = () => {
   const { register, handleSubmit } = useForm();
