@@ -61,6 +61,12 @@ export const ColsGenerator = (props) => {
     random: randomNumberGenerator(),
   }));
 
+  const handlePlaceholder = (e) => {
+    let memo = e.target.getAttribute("memo");
+    e.target.value == ""
+      ? (e.target.placeholder = memo)
+      : (e.target.placeholder = e.target.value);
+  };
   useEffect(() => {
     ReactTooltip.rebuild();
   }, []);
@@ -71,11 +77,15 @@ export const ColsGenerator = (props) => {
       <div className="row">
         {newArr.map((col, i) => (
           <div key={i} className={`col col-lg-${colGrid}`}>
-            <span data-tip={col.random}>{col.desc}</span>
+            <span data-tip={col.random} data-type="light">
+              {col.desc}
+            </span>
 
             <input
               name={col.desc}
               className="innerField"
+              memo={col.random}
+              onChange={(e) => handlePlaceholder(e)}
               placeholder={col.random}
               value={value}
             ></input>
