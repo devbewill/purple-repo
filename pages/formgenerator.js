@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as S from "../components/commons";
-import { quadriPF } from "./data";
+import { quadriPF } from "../components/data";
 import FormGenerator from "../components/formGenerator/formGenerator";
 
 function Home() {

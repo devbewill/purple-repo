@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as S from "../components/commons";
-import { items } from "./data";
+import { items } from "../components/data";
 import InlineForm from "../components/inlineForm/inlineForm";
 
 function Home() {

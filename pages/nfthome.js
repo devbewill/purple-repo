@@ -1,4 +1,4 @@
-import { items } from "./data";
+import { items } from "../components/data";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as S from "../components/commons";

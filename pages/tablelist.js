@@ -1,4 +1,4 @@
-import { items } from "./data";
+import { items } from "../components/data";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
