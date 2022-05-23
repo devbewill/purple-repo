@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
-import { project } from "../../data";
+import { project } from "../../pages/data";
 
 const Accordion = (props) => {
   const contentEl = useRef([]);
