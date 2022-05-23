@@ -36,6 +36,11 @@ export const RowGenerator = ({ refactorObj }) => {
 };
 
 export const ColsGenerator = (props) => {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    setValue((Math.random() * (10000.0 - 1.0 + 1.0) + 1.0).toFixed(2));
+  }, []);
   const { obj, i, colGrid } = props;
   return (
     <Riga key={i}>
@@ -46,9 +51,7 @@ export const ColsGenerator = (props) => {
             <span className="fieldDescription">{col.desc}</span>
             <div className="innerField">
               <span className="campo">{col.col}</span>
-              <p className="amount">
-                {(Math.random() * (10000.0 - 1.0 + 1.0) + 1.0).toFixed(2)}
-              </p>
+              <p className="amount">{value}</p>
             </div>
           </div>
         ))}
