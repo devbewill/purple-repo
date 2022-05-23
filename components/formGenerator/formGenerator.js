@@ -77,9 +77,7 @@ export const ColsGenerator = (props) => {
       <div className="row">
         {newArr.map((col, i) => (
           <div key={i} className={`col col-lg-${colGrid}`}>
-            <span data-tip={col.random} data-type="light">
-              {col.desc}
-            </span>
+            <span data-tip={col.random}>{col.desc}</span>
 
             <input
               name={col.desc}
